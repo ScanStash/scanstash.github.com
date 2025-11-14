@@ -1,0 +1,39 @@
+# English translations
+lang: en
+lang_name: English
+
+# App content
+app_name: ScanStash
+app_description: Scan documents with your mobile camera and store them securely in the cloud. Browse, share, and print anytime—no more paper documents.
+
+# Features
+features:
+  - title: Scan with Your Camera
+    description: Point, shoot, and scan. Use your phone's camera to capture documents, receipts, invoices, and contracts in seconds with crisp, clear results.
+    fontawesome_icon_name: camera
+    
+  - title: Secure Cloud Sync
+    description: All your documents are automatically saved and synchronized in secure cloud storage. Access them from any device, anytime, anywhere.
+    fontawesome_icon_name: cloud
+
+  - title: Browse Your Documents
+    description: Find what you need instantly. Browse, search, and organize all your scanned documents with ease. Your digital filing cabinet is always organized.
+    fontawesome_icon_name: folder-open
+
+  - title: AI Invoice Analysis
+    description: Let AI do the work. Automatically extract key information from invoices—amounts, dates, vendors, and more—so you don't have to enter data manually.
+    fontawesome_icon_name: brain
+
+  - title: Send to Tax Advisor
+    description: One tap to send invoices directly to your tax advisor. Keep them informed throughout the year and make tax season stress-free.
+    fontawesome_icon_name: paper-plane
+
+  - title: Share & Print
+    description: Share documents via email or messaging apps, or print them directly from your phone. No need to transfer files or find a computer.
+    fontawesome_icon_name: share-alt
+
+# UI strings
+footer_made_by: Made by
+footer_in: in
+press_kit: Press Kit
+

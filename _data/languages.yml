@@ -1,0 +1,17 @@
+# Supported languages
+languages:
+  - code: en
+    name: English
+    native_name: English
+  - code: de
+    name: German
+    native_name: Deutsch
+  - code: fr
+    name: French
+    native_name: Français
+  - code: es
+    name: Spanish
+    native_name: Español
+
+default: en
+

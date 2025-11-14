@@ -1,0 +1,39 @@
+# German translations
+lang: de
+lang_name: Deutsch
+
+# App content
+app_name: ScanStash
+app_description: Scannen Sie Dokumente mit Ihrer Mobilkamera und speichern Sie sie sicher in der Cloud. Durchsuchen, teilen und drucken Sie jederzeit—keine Papierdokumente mehr.
+
+# Features
+features:
+  - title: Mit Ihrer Kamera scannen
+    description: Zielen, schießen und scannen. Verwenden Sie die Kamera Ihres Telefons, um Dokumente, Belege, Rechnungen und Verträge in Sekunden mit klaren, scharfen Ergebnissen zu erfassen.
+    fontawesome_icon_name: camera
+    
+  - title: Sichere Cloud-Synchronisation
+    description: Alle Ihre Dokumente werden automatisch gespeichert und in sicherem Cloud-Speicher synchronisiert. Greifen Sie von jedem Gerät, jederzeit und überall darauf zu.
+    fontawesome_icon_name: cloud
+
+  - title: Durchsuchen Sie Ihre Dokumente
+    description: Finden Sie sofort, was Sie brauchen. Durchsuchen, suchen und organisieren Sie alle Ihre gescannten Dokumente mit Leichtigkeit. Ihr digitales Aktenschrank ist immer organisiert.
+    fontawesome_icon_name: folder-open
+
+  - title: KI-Rechnungsanalyse
+    description: Lassen Sie die KI die Arbeit erledigen. Extrahieren Sie automatisch wichtige Informationen aus Rechnungen—Beträge, Daten, Lieferanten und mehr—damit Sie keine Daten manuell eingeben müssen.
+    fontawesome_icon_name: brain
+
+  - title: An Steuerberater senden
+    description: Ein Tippen, um Rechnungen direkt an Ihren Steuerberater zu senden. Halten Sie sie das ganze Jahr über informiert und machen Sie die Steuersaison stressfrei.
+    fontawesome_icon_name: paper-plane
+
+  - title: Teilen & Drucken
+    description: Teilen Sie Dokumente per E-Mail oder Messaging-Apps oder drucken Sie sie direkt von Ihrem Telefon. Keine Notwendigkeit, Dateien zu übertragen oder einen Computer zu finden.
+    fontawesome_icon_name: share-alt
+
+# UI strings
+footer_made_by: Erstellt von
+footer_in: in
+press_kit: Pressemappe
+

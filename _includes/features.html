@@ -1,7 +1,9 @@
 <div class="features">
+    {% assign current_lang = page.lang | default: site.default_lang %}
+    {% assign lang_data = site.data[current_lang] %}
+    {% assign features = lang_data.features | default: site.features %}
 
-    {% for feature in site.features %}
-
+    {% for feature in features %}
     {% if feature.title %}
     <div class="feature">
         <div>
@@ -20,7 +22,5 @@
         </div>
     </div>
     {% endif %}
-
     {% endfor %}
-
 </div>

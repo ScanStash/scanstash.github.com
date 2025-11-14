@@ -1,0 +1,39 @@
+# Spanish translations
+lang: es
+lang_name: Español
+
+# App content
+app_name: ScanStash
+app_description: Escanea documentos con la cámara de tu móvil y guárdalos de forma segura en la nube. Navega, comparte e imprime en cualquier momento—no más documentos en papel.
+
+# Features
+features:
+  - title: Escanea con tu cámara
+    description: Apunta, dispara y escanea. Usa la cámara de tu teléfono para capturar documentos, recibos, facturas y contratos en segundos con resultados nítidos y claros.
+    fontawesome_icon_name: camera
+    
+  - title: Sincronización en la nube segura
+    description: Todos tus documentos se guardan y sincronizan automáticamente en almacenamiento en la nube seguro. Accede a ellos desde cualquier dispositivo, en cualquier momento y lugar.
+    fontawesome_icon_name: cloud
+
+  - title: Navega tus documentos
+    description: Encuentra instantáneamente lo que necesitas. Navega, busca y organiza todos tus documentos escaneados con facilidad. Tu archivador digital siempre está organizado.
+    fontawesome_icon_name: folder-open
+
+  - title: Análisis de facturas con IA
+    description: Deja que la IA haga el trabajo. Extrae automáticamente información clave de las facturas—montos, fechas, proveedores y más—para que no tengas que ingresar datos manualmente.
+    fontawesome_icon_name: brain
+
+  - title: Enviar al asesor fiscal
+    description: Un toque para enviar facturas directamente a tu asesor fiscal. Manténlo informado durante todo el año y haz que la temporada de impuestos sea sin estrés.
+    fontawesome_icon_name: paper-plane
+
+  - title: Compartir e imprimir
+    description: Comparte documentos por correo electrónico o aplicaciones de mensajería, o imprímelos directamente desde tu teléfono. No necesitas transferir archivos ni buscar una computadora.
+    fontawesome_icon_name: share-alt
+
+# UI strings
+footer_made_by: Creado por
+footer_in: en
+press_kit: Kit de prensa
+
