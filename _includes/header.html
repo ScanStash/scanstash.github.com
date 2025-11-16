@@ -25,8 +25,11 @@
 				{% endif %}
 			{% endfor %}
 			{% if site.presskit_download_link %}
-				<li><a href="{{ site.presskit_download_link }}">Press Kit</a></li>
+				{% assign current_lang = page.lang | default: site.default_lang %}
+				{% assign lang_data = site.data[current_lang] %}
+				<li><a href="{{ site.presskit_download_link }}">{{ lang_data.press_kit | default: "Press Kit" }}</a></li>
 			{% endif %}
 		</ul>
+		{% include language-switcher.html %}
 	</nav>
 </header>

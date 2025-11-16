@@ -1,0 +1,98 @@
+<script>
+(function() {
+  // Get current language from URL, localStorage, or browser
+  function getCurrentLanguage() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var urlLang = urlParams.get('lang');
+    var storedLang = localStorage.getItem('preferred_lang');
+    var browserLang = navigator.language.split('-')[0];
+    var supportedLangs = ['en', 'de', 'fr', 'es'];
+    
+    return urlLang || storedLang || (supportedLangs.includes(browserLang) ? browserLang : null) || window.DEFAULT_LANG || 'en';
+  }
+  
+  // Update page content with selected language
+  function updatePageLanguage(lang) {
+    if (!window.LANGUAGE_DATA || !window.LANGUAGE_DATA[lang]) {
+      return;
+    }
+    
+    var langData = window.LANGUAGE_DATA[lang];
+    
+    // Update app name
+    var appNameEl = document.querySelector('.appName');
+    if (appNameEl && langData.app_name) {
+      appNameEl.textContent = langData.app_name;
+    }
+    
+    // Update app description
+    var appDescEl = document.querySelector('.appDescription');
+    if (appDescEl && langData.app_description) {
+      appDescEl.textContent = langData.app_description;
+    }
+    
+    // Update features
+    if (langData.features && Array.isArray(langData.features)) {
+      var featureElements = document.querySelectorAll('.feature');
+      langData.features.forEach(function(feature, index) {
+        if (featureElements[index]) {
+          var titleEl = featureElements[index].querySelector('h3');
+          var descEl = featureElements[index].querySelector('p');
+          if (titleEl && feature.title) titleEl.textContent = feature.title;
+          if (descEl && feature.description) descEl.textContent = feature.description;
+        }
+      });
+    }
+    
+    // Update footer text
+    var footerTextEl = document.querySelector('.footerText');
+    if (footerTextEl && langData.footer_made_by) {
+      var originalText = footerTextEl.innerHTML;
+      // Replace "Made by" with translated version
+      originalText = originalText.replace(/Made by|Erstellt von|Créé par|Creado por/g, langData.footer_made_by);
+      originalText = originalText.replace(/\bin\b/g, langData.footer_in || 'in');
+      footerTextEl.innerHTML = originalText;
+    }
+    
+    // Update Press Kit links
+    var pressKitTexts = ['Press Kit', 'Pressemappe', 'Kit de presse', 'Kit de prensa'];
+    var allLinks = document.querySelectorAll('a');
+    allLinks.forEach(function(link) {
+      if (pressKitTexts.includes(link.textContent.trim()) && langData.press_kit) {
+        link.textContent = langData.press_kit;
+      }
+    });
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+    
+    // Update language selector
+    var langSelect = document.getElementById('lang-select');
+    if (langSelect) {
+      langSelect.value = lang;
+    }
+  }
+  
+  // Initialize language on page load
+  var currentLang = getCurrentLanguage();
+  if (currentLang !== '{{ page.lang | default: site.default_lang }}') {
+    // Update content immediately if language differs
+    updatePageLanguage(currentLang);
+  }
+  
+  // Store preference
+  localStorage.setItem('preferred_lang', currentLang);
+  
+  // Make switchLanguage function available globally
+  window.switchLanguage = function(lang) {
+    localStorage.setItem('preferred_lang', lang);
+    updatePageLanguage(lang);
+    
+    // Update URL without reload
+    var url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    window.history.pushState({}, '', url.toString());
+  };
+})();
+</script>
+

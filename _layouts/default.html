@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-us">
+{% assign current_lang = page.lang | default: site.default_lang %}
+<html lang="{{ current_lang }}">
 
 {% include head.html %}
+{% include language-data.html %}
 
 <body>
+{% include language-updater.html %}
     <div class="imageWrapper">
             <div class="headerBackground">
                 <div class="container">
@@ -39,7 +42,9 @@
                         </div>
                         <div class="appNamePriceContainer">
                             <h1 class="appName">
-                                {{ site.app_name }}
+                                {% assign current_lang = page.lang | default: site.default_lang %}
+                                {% assign lang_data = site.data[current_lang] %}
+                                {{ lang_data.app_name | default: site.app_name }}
                             </h1>
                             <h2 class="appPrice">
                                 {{ site.app_price }}
@@ -47,7 +52,9 @@
                         </div>
                         <div class="appDescriptionContainer">
                             <p class ="appDescription">
-                                {{ site.app_description }}
+                                {% assign current_lang = page.lang | default: site.default_lang %}
+                                {% assign lang_data = site.data[current_lang] %}
+                                {{ lang_data.app_description | default: site.app_description }}
                             </p>
                         </div>
                         <div class="downloadButtonsContainer">

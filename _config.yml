@@ -1,3 +1,7 @@
+# Localization
+default_lang                              : en                                        # Default language code (en, de, fr, es)
+languages                                 : [en, de, fr, es]                          # Supported language codes
+
 #page title
 page_title                                : ScanStash - Document Scanning & Secure Storage                                           # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
 

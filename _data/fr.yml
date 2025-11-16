@@ -1,0 +1,39 @@
+# French translations
+lang: fr
+lang_name: Français
+
+# App content
+app_name: ScanStash
+app_description: Scannez des documents avec l'appareil photo de votre mobile et stockez-les en toute sécurité dans le cloud. Parcourez, partagez et imprimez à tout moment—plus de documents papier.
+
+# Features
+features:
+  - title: Scannez avec votre appareil photo
+    description: Visez, photographiez et scannez. Utilisez l'appareil photo de votre téléphone pour capturer des documents, reçus, factures et contrats en quelques secondes avec des résultats nets et clairs.
+    fontawesome_icon_name: camera
+    
+  - title: Synchronisation cloud sécurisée
+    description: Tous vos documents sont automatiquement enregistrés et synchronisés dans un stockage cloud sécurisé. Accédez-y depuis n'importe quel appareil, à tout moment, n'importe où.
+    fontawesome_icon_name: cloud
+
+  - title: Parcourez vos documents
+    description: Trouvez instantanément ce dont vous avez besoin. Parcourez, recherchez et organisez tous vos documents scannés en toute simplicité. Votre classeur numérique est toujours organisé.
+    fontawesome_icon_name: folder-open
+
+  - title: Analyse de factures par IA
+    description: Laissez l'IA faire le travail. Extrayez automatiquement les informations clés des factures—montants, dates, fournisseurs et plus encore—pour ne plus avoir à saisir de données manuellement.
+    fontawesome_icon_name: brain
+
+  - title: Envoyer au conseiller fiscal
+    description: Un simple appui pour envoyer les factures directement à votre conseiller fiscal. Tenez-le informé tout au long de l'année et rendez la saison fiscale sans stress.
+    fontawesome_icon_name: paper-plane
+
+  - title: Partager et imprimer
+    description: Partagez des documents par e-mail ou applications de messagerie, ou imprimez-les directement depuis votre téléphone. Pas besoin de transférer des fichiers ou de trouver un ordinateur.
+    fontawesome_icon_name: share-alt
+
+# UI strings
+footer_made_by: Créé par
+footer_in: à
+press_kit: Kit de presse
+
