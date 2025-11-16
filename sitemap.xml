@@ -1,0 +1,55 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {% assign site_url = site.your_link | default: "https://scanstash.com" %}
+  
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site_url }}/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    {% for lang in site.languages %}
+      {% if lang != site.default_lang %}
+        <xhtml:link rel="alternate" hreflang="{{ lang }}" href="{{ site_url }}/{{ lang }}/"/>
+      {% endif %}
+    {% endfor %}
+    <xhtml:link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site_url }}/"/>
+  </url>
+  
+  <!-- Language versions of homepage -->
+  {% for lang in site.languages %}
+    {% if lang != site.default_lang %}
+      <url>
+        <loc>{{ site_url }}/{{ lang }}/</loc>
+        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        {% for alt_lang in site.languages %}
+          <xhtml:link rel="alternate" hreflang="{{ alt_lang }}" href="{{ site_url }}{% if alt_lang != site.default_lang %}/{{ alt_lang }}{% endif %}/"/>
+        {% endfor %}
+      </url>
+    {% endif %}
+  {% endfor %}
+  
+  <!-- Pages -->
+  {% for page in site.pages %}
+    {% if page.url != '/' and page.url != '/sitemap.xml' and page.url != '/robots.txt' %}
+      <url>
+        <loc>{{ site_url }}{{ page.url | relative_url }}</loc>
+        <lastmod>{{ page.date | default: site.time | date: "%Y-%m-%d" }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        {% if page.lang %}
+          {% for lang in site.languages %}
+            <xhtml:link rel="alternate" hreflang="{{ lang }}" href="{{ site_url }}{{ page.url | relative_url | replace: page.lang, lang }}"/>
+          {% endfor %}
+        {% endif %}
+      </url>
+    {% endif %}
+  {% endfor %}
+</urlset>
+
