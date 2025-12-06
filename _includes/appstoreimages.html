@@ -28,12 +28,18 @@ $(function() {
             var $appIconLarge = $(".appIconLarge");
             if (!$appIconLarge.attr('src')) {
                 $($appIconLarge).attr("src", appInfo.artworkUrl512);
+                if (!$appIconLarge.attr('alt')) {
+                    $($appIconLarge).attr("alt", appInfo.trackName + " App Icon");
+                }
             }
 
             // Set header app icon using the iOS app ID if it is not set manually in _config.yml
             var $appIconHeader = $(".headerIcon");
             if (!$appIconHeader.attr('src')) {
                 $($appIconHeader).attr("src", appInfo.artworkUrl512);
+                if (!$appIconHeader.attr('alt')) {
+                    $($appIconHeader).attr("alt", appInfo.trackName + " Logo");
+                }
             }
 
             // Set app name using the iOS app ID if it is not set manually in _config.yml
